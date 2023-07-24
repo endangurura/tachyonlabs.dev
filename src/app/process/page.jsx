@@ -75,7 +75,9 @@ function Build() {
     <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-        Once the requirements are crystal clear, we craft a customized solution that perfectly suits your needs. Whether it's an AI application, a blockchain implementation, or a cybersecurity strategy, we design a roadmap for the project's success.
+        Once the requirements are crystal clear, we craft a customized solution that perfectly suits your needs.
+        Whether it&apos;s an AI application, a blockchain implementation, or a cybersecurity strategy,
+        we design a roadmap for the project&apos;s success.
         </p>
         <p>
         Communication is key to a fruitful collaboration. Throughout the process, we maintain open channels of communication, keeping you informed about the progress, challenges, and achievements. We value your input and actively incorporate your feedback into the development cycle.
@@ -106,8 +108,8 @@ function Deliver() {
           ensuring that the end product is reliable, secure, and user-friendly.
         </p>
         <p>
-          Once we've fine-tuned the solution and obtained your approval, we handle the smooth deployment of the project. 
-          Our support doesn't end there; we provide post-deployment assistance, maintenance,
+          Once we&apos;ve fine-tuned the solution and obtained your approval, we handle the smooth deployment of the project. 
+          Our support doesn&apos;t end there; we provide post-deployment assistance, maintenance,
           and continuous support to ensure that the solution functions flawlessly.
         </p>
         <p>

@@ -175,7 +175,7 @@ function Services() {
             <ListItem title="AI Advancements for a Smarter World">
               Harness the power of Artificial Intelligence with our state-of-the-art solutions.
               Our AI technologies are designed to streamline processes, optimize operations,
-              and drive intelligent decision-making. Whether it's leveraging machine learning algorithms,
+              and drive intelligent decision-making. Whether it&apos; leveraging machine learning algorithms,
               natural language processing, computer vision, or predictive analytics, 
               our AI offerings are tailored to meet the unique needs of businesses across various sectors.
             </ListItem>
@@ -183,10 +183,10 @@ function Services() {
               Explore the transformative potential of Blockchain technology with our comprehensive suite of services.
               Our expert team can guide you through the world of decentralized ledgers, smart contracts, and tokenization.
               We develop custom blockchain solutions that enhance transparency, security, and efficiency in your operations.
-              From building private permissioned networks to creating innovative decentralized applications, we've got you covered.
+              From building private permissioned networks to creating innovative decentralized applications, we&apos;ve got you covered.
             </ListItem>
             <ListItem title="Protecting Your Digital Frontier">
-              In today's interconnected world, cybersecurity is paramount.
+              In today&apos;s interconnected world, cybersecurity is paramount.
               We take a proactive approach to safeguard your digital assets and sensitive information. 
               Our cybersecurity experts are equipped with the latest tools and knowledge to identify vulnerabilities,
               conduct penetration testing, and develop robust security protocols.
