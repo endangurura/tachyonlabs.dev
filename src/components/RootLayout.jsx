@@ -60,12 +60,12 @@ function Header({
           onMouseLeave={() => setLogoHovered(false)}
         >
           <Logomark
-            className="h-8 sm:hidden"
+            className="h-16 sm:hidden"
             invert={invert}
             filled={logoHovered}
           />
           <Logo
-            className="hidden h-8 sm:block"
+            className="hidden h-16 sm:block"
             invert={invert}
             filled={logoHovered}
           />
@@ -127,13 +127,13 @@ function Navigation() {
   return (
     <nav className="mt-px font-display text-5xl font-medium tracking-tight text-white">
       <NavigationRow>
-        <NavigationItem href="/work">Our Work</NavigationItem>
         <NavigationItem href="/about">About Us</NavigationItem>
-      </NavigationRow>
-      <NavigationRow>
         <NavigationItem href="/process">Our Process</NavigationItem>
-        <NavigationItem href="/blog">Blog</NavigationItem>
       </NavigationRow>
+      {/* <NavigationRow>
+        <NavigationItem href="/work">Our Work</NavigationItem>
+        <NavigationItem href="/blog">Blog</NavigationItem>
+      </NavigationRow> */}
     </nav>
   )
 }

@@ -19,6 +19,8 @@ import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
+import { logoBitcoinLight } from '@/images/bitcoin/logo-light.svg'
+import { logoBitcoinDark } from '@/images/bitcoin/logo-dark.svg'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -29,6 +31,10 @@ const clients = [
   ['Green Life', logoGreenLife],
   ['Bright Path', logoBrightPath],
   ['North Adventures', logoNorthAdventures],
+]
+
+const technologies = [
+  ['Bitcoin', logoBitcoinLight],
 ]
 
 function Clients() {
@@ -50,6 +56,35 @@ function Clients() {
               <li key={client}>
                 <FadeIn>
                   <Image src={logo} alt={client} unoptimized />
+                </FadeIn>
+              </li>
+            ))}
+          </ul>
+        </FadeInStagger>
+      </Container>
+    </div>
+  )
+}
+
+function Technologies() {
+  return (
+    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+      <Container>
+        <FadeIn className="flex items-center gap-x-8">
+          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
+            Technologies we work with
+          </h2>
+          <div className="h-px flex-auto bg-neutral-800" />
+        </FadeIn>
+        <FadeInStagger faster>
+          <ul
+            role="list"
+            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+          >
+            {technologies.map(([technology, logo]) => (
+              <li key={technology}>
+                <FadeIn>
+                  <Image src={logo} alt={technology} unoptimized />
                 </FadeIn>
               </li>
             ))}
@@ -118,12 +153,11 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        title="Empowering the Future with Cutting-Edge Technology."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          Securing the Future: Unleashing AI, Empowering Blockchain, Defending Cyber Realms.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -138,24 +172,26 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+            <ListItem title="AI Advancements for a Smarter World">
+              Harness the power of Artificial Intelligence with our state-of-the-art solutions.
+              Our AI technologies are designed to streamline processes, optimize operations,
+              and drive intelligent decision-making. Whether it's leveraging machine learning algorithms,
+              natural language processing, computer vision, or predictive analytics, 
+              our AI offerings are tailored to meet the unique needs of businesses across various sectors.
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="Revolutionizing Trust with Blockchain">
+              Explore the transformative potential of Blockchain technology with our comprehensive suite of services.
+              Our expert team can guide you through the world of decentralized ledgers, smart contracts, and tokenization.
+              We develop custom blockchain solutions that enhance transparency, security, and efficiency in your operations.
+              From building private permissioned networks to creating innovative decentralized applications, we've got you covered.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we’ve
-              used for the past six years.
-            </ListItem>
-            <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That’s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+            <ListItem title="Protecting Your Digital Frontier">
+              In today's interconnected world, cybersecurity is paramount.
+              We take a proactive approach to safeguard your digital assets and sensitive information. 
+              Our cybersecurity experts are equipped with the latest tools and knowledge to identify vulnerabilities,
+              conduct penetration testing, and develop robust security protocols.
+              We offer end-to-end solutions to mitigate risks and respond effectively to potential threats,
+              ensuring the safety and resilience of your digital infrastructure.
             </ListItem>
           </List>
         </div>
@@ -177,28 +213,29 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award winning developer studio based in Denmark.
+          AI. Blockchain. Cybersecurity.
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are developer studio working at the intersection of design and
-            technology. It’s a really busy intersection though — a lot of our
-            staff have been involved in hit and runs.
+          We are a dynamic team of experts driven by our passion for innovation and our commitment to shaping a better tomorrow. 
+          We specialize in providing groundbreaking solutions in the fields of AI, Blockchain, and Cybersecurity.
+          With a keen focus on research and development, we aim to stay at the forefront of technological advancements, 
+          ensuring that our clients always have a competitive edge in their industries.
           </p>
         </FadeIn>
       </Container>
 
-      <Clients />
+      <Technologies />
 
-      <CaseStudies caseStudies={caseStudies} />
+      {/* <CaseStudies caseStudies={caseStudies} /> */}
 
-      <Testimonial
+      {/* <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Phobia', logo: logoPhobiaDark }}
       >
         The team at Studio went above and beyond with our onboarding, even
         finding a way to access the user’s microphone without triggering one of
         those annoying permission dialogs.
-      </Testimonial>
+      </Testimonial> */}
 
       <Services />
 

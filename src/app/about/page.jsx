@@ -195,37 +195,35 @@ export default async function About() {
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Studio was started by three friends who noticed that developer
-            studios were charging clients double what an in-house team would
-            cost. Since the beginning, we have been committed to doing things
-            differently by charging triple instead.
+            Tachyon Labs was founded with a shared vision of transforming industries through the power of technology. 
+            Our journey began with a small team of dedicated professionals who believed in the potential of AI,
+            the disruptive force of Blockchain, and the paramount importance of Cybersecurity in the digital age.
           </p>
           <p>
-            At Studio, we’re more than just colleagues — we’re a family. This
-            means we pay very little and expect people to work late. We want our
-            employees to bring their whole selves to work. In return, we just
-            ask that they keep themselves there until at least 6:30pm.
+            As we took our first steps, our commitment to innovation and our client-centric approach garnered recognition,
+            earning us the trust of numerous businesses across diverse sectors. With every project,
+            we continued to strengthen our expertise, refining our methodologies, and expanding our horizons.
           </p>
         </div>
       </PageIntro>
-      <Container className="mt-16">
+      {/* <Container className="mt-16">
         <StatList>
           <StatListItem value="35" label="Underpaid employees" />
           <StatListItem value="52" label="Placated clients" />
           <StatListItem value="$25M" label="Invoices billed" />
         </StatList>
-      </Container>
+      </Container> */}
 
-      <Culture />
+      {/* <Culture /> */}
 
-      <Team />
+      {/* <Team /> */}
 
-      <PageLinks
+      {/* <PageLinks
         className="mt-24 sm:mt-32 lg:mt-40"
         title="From the blog"
         intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
         pages={blogArticles}
-      />
+      /> */}
 
       <ContactSection />
     </>

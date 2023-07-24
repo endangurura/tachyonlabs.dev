@@ -58,11 +58,9 @@ function DribbbleIcon(props) {
 }
 
 export const socialMediaProfiles = [
-  { title: 'Facebook', href: 'https://facebook.com', icon: FacebookIcon },
-  { title: 'Instagram', href: 'https://instagram.com', icon: InstagramIcon },
-  { title: 'Twitter', href: 'https://twitter.com', icon: TwitterIcon },
-  { title: 'GitHub', href: 'https://github.com', icon: GitHubIcon },
-  { title: 'Dribbble', href: 'https://dribbble.com', icon: DribbbleIcon },
+  { title: 'Facebook', href: 'https://www.facebook.com/tachyonlabsdev', icon: FacebookIcon },
+  { title: 'Twitter', href: 'https://x.com/tachyonlabs_', icon: TwitterIcon },
+  { title: 'GitHub', href: 'https://github.com/tachyon-labs', icon: GitHubIcon },
 ]
 
 export function SocialMedia({ className, invert = false }) {
