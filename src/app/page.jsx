@@ -34,7 +34,7 @@ const clients = [
 ]
 
 const technologies = [
-  ['Bitcoin', logoBitcoinLight],
+  // ['Bitcoin', logoPhobiaLight],
 ]
 
 function Clients() {
