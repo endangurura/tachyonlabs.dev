@@ -213,8 +213,12 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-          AI. Blockchain. Cybersecurity.
+          Empowering Innovation, Securing the Future.
           </h1>
+          <br />
+          <h2 className='font-display text-3xl font-medium tracking-tight text-neutral-400 [text-wrap:balance] sm:text-5xl'>
+          AI. Blockchain. Cybersecurity.
+          </h2>
           <p className="mt-6 text-xl text-neutral-600">
           We are a dynamic team of experts driven by our passion for innovation and our commitment to shaping a better tomorrow. 
           We specialize in providing groundbreaking solutions in the fields of AI, Blockchain, and Cybersecurity.
