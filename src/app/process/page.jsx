@@ -80,10 +80,15 @@ function Build() {
         we design a roadmap for the project&apos;s success.
         </p>
         <p>
-        Communication is key to a fruitful collaboration. Throughout the process, we maintain open channels of communication, keeping you informed about the progress, challenges, and achievements. We value your input and actively incorporate your feedback into the development cycle.
+        Communication is key to a fruitful collaboration. Throughout the process, we maintain open channels of communication,
+        keeping you informed about the progress, challenges, and achievements.
+        We value your input and actively incorporate your feedback into the development cycle.
         </p>
         <p>
-        We believe in the agile methodology, which allows us to be flexible and adaptive. As we progress, we break down the project into manageable phases, delivering tangible results at each step. Regular review meetings ensure that the project is heading in the right direction, and we are quick to iterate based on your evolving needs.
+        We believe in the agile methodology, which allows us to be flexible and adaptive.
+        As we progress, we break down the project into manageable phases, delivering tangible results at each step.
+        Regular review meetings ensure that the project is heading in the right direction,
+        and we are quick to iterate based on your evolving needs.
         </p>
       </div>
 
@@ -205,7 +210,7 @@ export default function Process() {
         <p>
           we believe that the foundation of successful projects lies in strong collaboration with our clients.
           We follow a structured yet flexible process to ensure that your vision transforms into reality seamlessly. 
-          Here's an overview of how we work.
+          Here&apos;s an overview of how we work.
         </p>
       </PageIntro>
 
