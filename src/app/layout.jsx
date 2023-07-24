@@ -5,7 +5,7 @@ import '@/styles/tailwind.css'
 export const metadata = {
   title: {
     template: '%s - Tachyon',
-    default: 'Tachyon Labs - Faster Than Lightning',
+    default: 'Tachyon Labs - Empowering Innovation, Securing the Future.',
   },
 }
 
