@@ -27,6 +27,7 @@ import logoNear from '@/images/technologies/near.png'
 import logoHyperledger from '@/images/technologies/hyperledger.png'
 import logoAlgorand from '@/images/technologies/algorand2.png'
 import logoPolkadot from '@/images/technologies/polkadot2.png'
+import logoOpenai from '@/images/technologies/openai.png'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -44,10 +45,10 @@ const technologies = [
   ['LDK', logoLDK],
   ['Ethereum', logoEthereum],
   ['Solana', logoSolana],
-  ['Algorand', logoAlgorand],
+  ['Openai', logoOpenai],
   ['Hyperledger', logoHyperledger],
   ['Near', logoNear],
-  ['Polkadot', logoPolkadot ],
+  ['Polkadot', logoPolkadot],
 ]
 
 function Clients() {
