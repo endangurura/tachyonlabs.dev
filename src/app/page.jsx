@@ -19,8 +19,14 @@ import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
-import { logoBitcoinLight } from '@/images/bitcoin/logo-light.svg'
-import { logoBitcoinDark } from '@/images/bitcoin/logo-dark.svg'
+import  logoBitcoinLight from '@/images/technologies/bitcoin.png'
+import logoLDK from '@/images/technologies/ldk.png'
+import logoEthereum from '@/images/technologies/ethereum2.png'
+import logoSolana from '@/images/technologies/solana2.png'
+import logoNear from '@/images/technologies/near.png'
+import logoHyperledger from '@/images/technologies/hyperledger.png'
+import logoAlgorand from '@/images/technologies/algorand2.png'
+import logoPolkadot from '@/images/technologies/polkadot2.png'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -34,7 +40,14 @@ const clients = [
 ]
 
 const technologies = [
-  // ['Bitcoin', logoPhobiaLight],
+  ['Bitcoin', logoBitcoinLight],
+  ['LDK', logoLDK],
+  ['Ethereum', logoEthereum],
+  ['Solana', logoSolana],
+  ['Algorand', logoAlgorand],
+  ['Hyperledger', logoHyperledger],
+  ['Near', logoNear],
+  ['Polkadot', logoPolkadot ],
 ]
 
 function Clients() {
@@ -72,7 +85,7 @@ function Technologies() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            Technologies we work with
+            Technologies & Partners
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -84,7 +97,7 @@ function Technologies() {
             {technologies.map(([technology, logo]) => (
               <li key={technology}>
                 <FadeIn>
-                  <Image src={logo} alt={technology} unoptimized />
+                  <Image src={logo} alt={technology} width={184} height={36} unoptimized />
                 </FadeIn>
               </li>
             ))}
