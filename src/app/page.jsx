@@ -19,7 +19,7 @@ import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
 import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
-import  logoBitcoinLight from '@/images/technologies/bitcoin.png'
+import logoBitcoinLight from '@/images/technologies/bitcoin.png'
 import logoLDK from '@/images/technologies/ldk.png'
 import logoEthereum from '@/images/technologies/ethereum2.png'
 import logoSolana from '@/images/technologies/solana2.png'
@@ -28,6 +28,10 @@ import logoHyperledger from '@/images/technologies/hyperledger.png'
 import logoAlgorand from '@/images/technologies/algorand2.png'
 import logoPolkadot from '@/images/technologies/polkadot2.png'
 import logoOpenai from '@/images/technologies/openai.png'
+import logoAnthropic from '@/images/technologies/anthropic.png'
+import logoMeta from '@/images/technologies/meta.png'
+import logoXai from '@/images/technologies/xai.png'
+import logoPolygon from '@/images/technologies/polygon.png'
 
 const clients = [
   ['Phobia', logoPhobiaLight],
@@ -41,14 +45,14 @@ const clients = [
 ]
 
 const technologies = [
+  ['Openai', logoOpenai],
+  ['Anthropic', logoAnthropic],
+  ['Meta', logoMeta],
+  ['Xai', logoXai],
   ['Bitcoin', logoBitcoinLight],
-  ['LDK', logoLDK],
   ['Ethereum', logoEthereum],
   ['Solana', logoSolana],
-  ['Openai', logoOpenai],
-  ['Hyperledger', logoHyperledger],
-  ['Near', logoNear],
-  ['Polkadot', logoPolkadot],
+  ['Polygon', logoPolygon],
 ]
 
 function Clients() {
@@ -190,7 +194,7 @@ function Services() {
               Harness the power of Artificial Intelligence with our state-of-the-art solutions.
               Our AI technologies are designed to streamline processes, optimize operations,
               and drive intelligent decision-making. Whether it&apos; leveraging machine learning algorithms,
-              natural language processing, computer vision, or predictive analytics, 
+              natural language processing, computer vision, or predictive analytics,
               our AI offerings are tailored to meet the unique needs of businesses across various sectors.
             </ListItem>
             <ListItem title="Revolutionizing Trust with Blockchain">
@@ -201,7 +205,7 @@ function Services() {
             </ListItem>
             <ListItem title="Protecting Your Digital Frontier">
               In today&apos;s interconnected world, cybersecurity is paramount.
-              We take a proactive approach to safeguard your digital assets and sensitive information. 
+              We take a proactive approach to safeguard your digital assets and sensitive information.
               Our cybersecurity experts are equipped with the latest tools and knowledge to identify vulnerabilities,
               conduct penetration testing, and develop robust security protocols.
               We offer end-to-end solutions to mitigate risks and respond effectively to potential threats,
@@ -227,17 +231,17 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-          Empowering Innovation, Securing the Future.
+            Empowering Innovation, Securing the Future.
           </h1>
           <br />
           <h2 className='font-display text-3xl font-medium tracking-tight text-neutral-400 [text-wrap:balance] sm:text-5xl'>
-          AI. Blockchain. Cybersecurity.
+            AI. Blockchain. Cybersecurity.
           </h2>
           <p className="mt-6 text-xl text-neutral-600">
-          We are a dynamic team of experts driven by our passion for innovation and our commitment to shaping a better tomorrow. 
-          We specialize in providing groundbreaking solutions in the fields of AI, Blockchain, and Cybersecurity.
-          With a keen focus on research and development, we aim to stay at the forefront of technological advancements, 
-          ensuring that our clients always have a competitive edge in their industries.
+            We are a dynamic team of experts driven by our passion for innovation and our commitment to shaping a better tomorrow.
+            We specialize in providing groundbreaking solutions in the fields of AI, Blockchain, and Cybersecurity.
+            With a keen focus on research and development, we aim to stay at the forefront of technological advancements,
+            ensuring that our clients always have a competitive edge in their industries.
           </p>
         </FadeIn>
       </Container>
