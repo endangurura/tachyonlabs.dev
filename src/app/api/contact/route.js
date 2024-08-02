@@ -69,7 +69,7 @@ export async function POST(
 		const options = {
 			From: 'no-reply@tachyonlabs.dev',
 			To: 'hello@tachyonlabs.dev',
-			Subject: 'Work inquiry',
+			Subject: `${fields.name[0]} - Work inquiry`,
 			HtmlBody: fieldsToHtml(fields),
 			ReplyTo: fields.email[0], // Use the email field as the Reply-To address
 			Attachments: attachments,
