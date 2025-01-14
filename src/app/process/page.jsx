@@ -75,20 +75,20 @@ function Build() {
     <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-        Once the requirements are crystal clear, we craft a customized solution that perfectly suits your needs.
-        Whether it&apos;s an AI application, a blockchain implementation, or a cybersecurity strategy,
-        we design a roadmap for the project&apos;s success.
+          Once the requirements are crystal clear, we craft a customized solution that perfectly suits your needs.
+          Whether it&apos;s an AI application or a cybersecurity strategy,
+          we design a roadmap for the project&apos;s success.
         </p>
         <p>
-        Communication is key to a fruitful collaboration. Throughout the process, we maintain open channels of communication,
-        keeping you informed about the progress, challenges, and achievements.
-        We value your input and actively incorporate your feedback into the development cycle.
+          Communication is key to a fruitful collaboration. Throughout the process, we maintain open channels of communication,
+          keeping you informed about the progress, challenges, and achievements.
+          We value your input and actively incorporate your feedback into the development cycle.
         </p>
         <p>
-        We believe in the agile methodology, which allows us to be flexible and adaptive.
-        As we progress, we break down the project into manageable phases, delivering tangible results at each step.
-        Regular review meetings ensure that the project is heading in the right direction,
-        and we are quick to iterate based on your evolving needs.
+          We believe in the agile methodology, which allows us to be flexible and adaptive.
+          As we progress, we break down the project into manageable phases, delivering tangible results at each step.
+          Regular review meetings ensure that the project is heading in the right direction,
+          and we are quick to iterate based on your evolving needs.
         </p>
       </div>
 
@@ -108,12 +108,12 @@ function Deliver() {
     <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Quality is our priority. We subject our solutions to rigorous testing to identify and fix any issues or vulnerabilities. 
+          Quality is our priority. We subject our solutions to rigorous testing to identify and fix any issues or vulnerabilities.
           Our testing procedures adhere to industry standards and best practices,
           ensuring that the end product is reliable, secure, and user-friendly.
         </p>
         <p>
-          Once we&apos;ve fine-tuned the solution and obtained your approval, we handle the smooth deployment of the project. 
+          Once we&apos;ve fine-tuned the solution and obtained your approval, we handle the smooth deployment of the project.
           Our support doesn&apos;t end there; we provide post-deployment assistance, maintenance,
           and continuous support to ensure that the solution functions flawlessly.
         </p>
@@ -135,7 +135,7 @@ function Deliver() {
           We handle the smooth deployment of the project.
         </ListItem>
         <ListItem title="Support">
-          Enhance the performance and functionality of your solution. 
+          Enhance the performance and functionality of your solution.
         </ListItem>
       </List>
     </Section>
@@ -209,7 +209,7 @@ export default function Process() {
       <PageIntro eyebrow="Our process" title="How we work">
         <p>
           we believe that the foundation of successful projects lies in strong collaboration with our clients.
-          We follow a structured yet flexible process to ensure that your vision transforms into reality seamlessly. 
+          We follow a structured yet flexible process to ensure that your vision transforms into reality seamlessly.
           Here&apos;s an overview of how we work.
         </p>
       </PageIntro>

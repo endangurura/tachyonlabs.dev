@@ -49,10 +49,10 @@ const technologies = [
   ['Anthropic', logoAnthropic],
   ['Meta', logoMeta],
   ['Xai', logoXai],
-  ['Bitcoin', logoBitcoinLight],
-  ['Ethereum', logoEthereum],
-  ['Solana', logoSolana],
-  ['Polygon', logoPolygon],
+  // ['Bitcoin', logoBitcoinLight],
+  // ['Ethereum', logoEthereum],
+  // ['Solana', logoSolana],
+  // ['Polygon', logoPolygon],
 ]
 
 function Clients() {
@@ -175,7 +175,7 @@ function Services() {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Securing the Future: Unleashing AI, Empowering Blockchain, Defending Cyber Realms.
+          Securing the Future: Unleashing AI and Defending Cyber Realms.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -197,12 +197,14 @@ function Services() {
               natural language processing, computer vision, or predictive analytics,
               our AI offerings are tailored to meet the unique needs of businesses across various sectors.
             </ListItem>
+            { /*
             <ListItem title="Revolutionizing Trust with Blockchain">
               Explore the transformative potential of Blockchain technology with our comprehensive suite of services.
               Our expert team can guide you through the world of decentralized ledgers, smart contracts, and tokenization.
               We develop custom blockchain solutions that enhance transparency, security, and efficiency in your operations.
               From building private permissioned networks to creating innovative decentralized applications, we&apos;ve got you covered.
             </ListItem>
+            */}
             <ListItem title="Protecting Your Digital Frontier">
               In today&apos;s interconnected world, cybersecurity is paramount.
               We take a proactive approach to safeguard your digital assets and sensitive information.
@@ -231,15 +233,15 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Empowering Innovation, Securing the Future.
+            AI. Cybersecurity. Reasearch Lab.
           </h1>
           <br />
           <h2 className='font-display text-3xl font-medium tracking-tight text-neutral-400 [text-wrap:balance] sm:text-5xl'>
-            AI. Blockchain. Cybersecurity.
+            Empowering Innovation, Securing the Future.
           </h2>
           <p className="mt-6 text-xl text-neutral-600">
             We are a dynamic team of experts driven by our passion for innovation and our commitment to shaping a better tomorrow.
-            We specialize in providing groundbreaking solutions in the fields of AI, Blockchain, and Cybersecurity.
+            We specialize in providing groundbreaking solutions in the fields of AI and Cybersecurity.
             With a keen focus on research and development, we aim to stay at the forefront of technological advancements,
             ensuring that our clients always have a competitive edge in their industries.
           </p>

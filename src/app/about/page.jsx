@@ -195,9 +195,9 @@ export default async function About() {
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Tachyon Labs was founded with a shared vision of transforming industries through the power of technology. 
+            Tachyon Labs was founded with a shared vision of transforming industries through the power of technology.
             Our journey began with a small team of dedicated professionals who believed in the potential of AI,
-            the disruptive force of Blockchain, and the paramount importance of Cybersecurity in the digital age.
+            and the paramount importance of Cybersecurity in the digital age.
           </p>
           <p>
             As we took our first steps, our commitment to innovation and our client-centric approach garnered recognition,
