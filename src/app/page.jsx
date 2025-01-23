@@ -233,7 +233,7 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            AI. Cybersecurity. Reasearch Lab.
+            AI Safety. Cybersecurity. Reasearch Lab.
           </h1>
           <br />
           <h2 className='font-display text-3xl font-medium tracking-tight text-neutral-400 [text-wrap:balance] sm:text-5xl'>
