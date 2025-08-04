@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { ContactSection } from '@/components/ContactSection'
 import { Container } from '@/components/Container'
@@ -7,73 +6,93 @@ import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
-import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
-import { loadMDXMetadata } from '@/lib/loadMDXMetadata'
-import logoBitcoinLight from '@/images/technologies/bitcoin.png'
-import logoLDK from '@/images/technologies/ldk.png'
-import logoEthereum from '@/images/technologies/ethereum2.png'
-import logoSolana from '@/images/technologies/solana2.png'
-import logoNear from '@/images/technologies/near.png'
-import logoHyperledger from '@/images/technologies/hyperledger.png'
-import logoAlgorand from '@/images/technologies/algorand2.png'
-import logoPolkadot from '@/images/technologies/polkadot2.png'
 import logoOpenai from '@/images/technologies/openai.png'
 import logoAnthropic from '@/images/technologies/anthropic.png'
 import logoMeta from '@/images/technologies/meta.png'
 import logoXai from '@/images/technologies/xai.png'
-import logoPolygon from '@/images/technologies/polygon.png'
+import logoMicrosoftAzure from '@/images/technologies/microsoft-azure.png'
 
-const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
-]
-
-const technologies = [
-  ['Openai', logoOpenai],
+const researchPartners = [
+  ['OpenAI', logoOpenai],
   ['Anthropic', logoAnthropic],
-  ['Meta', logoMeta],
-  ['Xai', logoXai],
-  // ['Bitcoin', logoBitcoinLight],
-  // ['Ethereum', logoEthereum],
-  // ['Solana', logoSolana],
-  // ['Polygon', logoPolygon],
+  ['Meta AI', logoMeta],
+  ['xAI', logoXai],
+  ['Microsoft', logoMicrosoftAzure],
 ]
 
-function Clients() {
+function SamaritanShowcase() {
+  return (
+    <div className="mt-24 rounded-4xl bg-gradient-to-b from-neutral-950 to-neutral-900 py-20 sm:mt-32 sm:py-32 lg:mt-56">
+      <Container>
+        <FadeIn className="text-center">
+          <h2 className="font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
+            Introducing Samaritan
+          </h2>
+          <p className="mt-6 text-xl text-neutral-300">
+            Our path to ASI—a superintelligence platform designed to transcend human cognitive limits
+          </p>
+        </FadeIn>
+        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <FadeInStagger>
+            <FadeIn className="rounded-3xl bg-white/5 p-8 backdrop-blur">
+              <h3 className="font-display text-xl font-semibold text-white">
+                Advanced Reasoning
+              </h3>
+              <p className="mt-4 text-neutral-300">
+                Multi-step reasoning capabilities that break down complex problems into manageable components
+              </p>
+            </FadeIn>
+            <FadeIn className="rounded-3xl bg-white/5 p-8 backdrop-blur">
+              <h3 className="font-display text-xl font-semibold text-white">
+                Autonomous Agents
+              </h3>
+              <p className="mt-4 text-neutral-300">
+                Self-directed AI agents capable of planning, executing, and learning from complex tasks
+              </p>
+            </FadeIn>
+            <FadeIn className="rounded-3xl bg-white/5 p-8 backdrop-blur">
+              <h3 className="font-display text-xl font-semibold text-white">
+                Safety-First Design
+              </h3>
+              <p className="mt-4 text-neutral-300">
+                Built with alignment and safety at its core, ensuring beneficial outcomes for humanity
+              </p>
+            </FadeIn>
+          </FadeInStagger>
+        </div>
+        <FadeIn className="mt-12 text-center">
+          <a
+            href="https://samaritan.si"
+            className="inline-flex items-center rounded-full bg-white px-8 py-3 font-semibold text-neutral-950 transition hover:bg-neutral-200"
+          >
+            Explore Samaritan →
+          </a>
+        </FadeIn>
+      </Container>
+    </div>
+  )
+}
+
+function ResearchPartners() {
   return (
     <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We’ve worked with hundreds of amazing people
+            Research Collaborations
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-5"
           >
-            {clients.map(([client, logo]) => (
-              <li key={client}>
+            {researchPartners.map(([partner, logo]) => (
+              <li key={partner}>
                 <FadeIn>
-                  <Image src={logo} alt={client} unoptimized />
+                  <Image src={logo} alt={partner} width={184} height={36} unoptimized />
                 </FadeIn>
               </li>
             ))}
@@ -84,78 +103,43 @@ function Clients() {
   )
 }
 
-function Technologies() {
-  return (
-    <div className="mt-24 rounded-4xl bg-neutral-950 py-20 sm:mt-32 sm:py-32 lg:mt-56">
-      <Container>
-        <FadeIn className="flex items-center gap-x-8">
-          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            Technologies & Partners
-          </h2>
-          <div className="h-px flex-auto bg-neutral-800" />
-        </FadeIn>
-        <FadeInStagger faster>
-          <ul
-            role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
-          >
-            {technologies.map(([technology, logo]) => (
-              <li key={technology}>
-                <FadeIn>
-                  <Image src={logo} alt={technology} width={184} height={36} unoptimized />
-                </FadeIn>
-              </li>
-            ))}
-          </ul>
-        </FadeInStagger>
-      </Container>
-    </div>
-  )
-}
+function ResearchAreas() {
+  const areas = [
+    {
+      title: 'ASI Alignment',
+      description: 'Ensuring artificial superintelligence systems remain beneficial and aligned with human values through advanced safety research.',
+    },
+    {
+      title: 'Multi-Agent Systems',
+      description: 'Developing coordinated AI agents that can collaborate, negotiate, and solve problems collectively.',
+    },
+    {
+      title: 'Reasoning & Planning',
+      description: 'Building systems capable of complex reasoning, long-term planning, and adaptive problem-solving.',
+    },
+  ]
 
-function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="The Path to Artificial Superintelligence"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world’s greatest
-          challenges. It’s also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+          Our research roadmap toward ASI focuses on breakthrough capabilities
+          while ensuring safety and alignment remain paramount at every stage.
         </p>
       </SectionIntro>
       <Container className="mt-16">
         <FadeInStagger className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          {caseStudies.map((caseStudy) => (
-            <FadeIn key={caseStudy.href} className="flex">
-              <article className="relative flex w-full flex-col rounded-3xl p-6 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50 sm:p-8">
-                <h3>
-                  <Link href={caseStudy.href}>
-                    <span className="absolute inset-0 rounded-3xl" />
-                    <Image
-                      src={caseStudy.logo}
-                      alt={caseStudy.client}
-                      className="h-16 w-16"
-                      unoptimized
-                    />
-                  </Link>
+          {areas.map((area) => (
+            <FadeIn key={area.title} className="flex">
+              <article className="relative flex w-full flex-col rounded-3xl p-8 ring-1 ring-neutral-950/5 transition hover:bg-neutral-50">
+                <h3 className="font-display text-2xl font-semibold text-neutral-950">
+                  {area.title}
                 </h3>
-                <p className="mt-6 flex gap-x-2 text-sm text-neutral-950">
-                  <time dateTime={caseStudy.year} className="font-semibold">
-                    {caseStudy.date.split('-')[0]}
-                  </time>
-                  <span className="text-neutral-300" aria-hidden="true">
-                    /
-                  </span>
-                  <span>Case study</span>
-                </p>
-                <p className="mt-6 font-display text-2xl font-semibold text-neutral-950">
-                  {caseStudy.title}
-                </p>
                 <p className="mt-4 text-base text-neutral-600">
-                  {caseStudy.description}
+                  {area.description}
                 </p>
               </article>
             </FadeIn>
@@ -166,16 +150,16 @@ function CaseStudies({ caseStudies }) {
   )
 }
 
-function Services() {
+function Capabilities() {
   return (
     <>
       <SectionIntro
-        eyebrow="Services"
-        title="Empowering the Future with Cutting-Edge Technology."
+        eyebrow="Capabilities"
+        title="Building the Future of Artificial Intelligence"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          Securing the Future: Unleashing AI and Defending Cyber Realms.
+          Advancing the frontiers of AI through groundbreaking research and development.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -190,28 +174,20 @@ function Services() {
             </FadeIn>
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-            <ListItem title="AI Advancements for a Smarter World">
-              Harness the power of Artificial Intelligence with our state-of-the-art solutions.
-              Our AI technologies are designed to streamline processes, optimize operations,
-              and drive intelligent decision-making. Whether it&apos; leveraging machine learning algorithms,
-              natural language processing, computer vision, or predictive analytics,
-              our AI offerings are tailored to meet the unique needs of businesses across various sectors.
+            <ListItem title="ASI Development">
+              We&apos;re building artificial superintelligence—systems that will exceed human intelligence
+              across all domains. Our research focuses on achieving ASI that is not only vastly more capable
+              but fundamentally safe, interpretable, and aligned with human values.
             </ListItem>
-            { /*
-            <ListItem title="Revolutionizing Trust with Blockchain">
-              Explore the transformative potential of Blockchain technology with our comprehensive suite of services.
-              Our expert team can guide you through the world of decentralized ledgers, smart contracts, and tokenization.
-              We develop custom blockchain solutions that enhance transparency, security, and efficiency in your operations.
-              From building private permissioned networks to creating innovative decentralized applications, we&apos;ve got you covered.
+            <ListItem title="AI Safety & Alignment Research">
+              Safety isn&apos;t an afterthought—it&apos;s fundamental to our approach. We conduct cutting-edge research
+              in AI alignment, interpretability, and robustness to ensure our systems remain beneficial
+              as they become more capable.
             </ListItem>
-            */}
-            <ListItem title="Protecting Your Digital Frontier">
-              In today&apos;s interconnected world, cybersecurity is paramount.
-              We take a proactive approach to safeguard your digital assets and sensitive information.
-              Our cybersecurity experts are equipped with the latest tools and knowledge to identify vulnerabilities,
-              conduct penetration testing, and develop robust security protocols.
-              We offer end-to-end solutions to mitigate risks and respond effectively to potential threats,
-              ensuring the safety and resilience of your digital infrastructure.
+            <ListItem title="Open Research & Collaboration">
+              We believe ASI development requires collective wisdom. Our research is conducted openly,
+              with findings shared globally to ensure humanity achieves ASI that is both
+              transformative and safe.
             </ListItem>
           </List>
         </div>
@@ -221,47 +197,38 @@ function Services() {
 }
 
 export const metadata = {
+  title: 'Tachyon Labs - AI Research Lab',
   description:
-    'We are developer studio working at the intersection of design and technology.',
+    'Building Samaritan: Advanced artificial superintelligence systems for solving humanity\'s greatest challenges. Pioneering ASI research with safety at the core.',
 }
 
 export default async function Home() {
-  let caseStudies = (await loadMDXMetadata('work')).slice(0, 3)
-
   return (
     <>
       <Container className="mt-24 sm:mt-32 md:mt-56">
-        <FadeIn className="max-w-3xl">
+        <FadeIn className="max-w-4xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            AI Safety. Cybersecurity. Reasearch Lab.
+            Building Superintelligence for Humanity
           </h1>
-          <br />
-          <h2 className='font-display text-3xl font-medium tracking-tight text-neutral-400 [text-wrap:balance] sm:text-5xl'>
-            Empowering Innovation, Securing the Future.
-          </h2>
-          <p className="mt-6 text-xl text-neutral-600">
-            We are a dynamic team of experts driven by our passion for innovation and our commitment to shaping a better tomorrow.
-            We specialize in providing groundbreaking solutions in the fields of AI and Cybersecurity.
-            With a keen focus on research and development, we aim to stay at the forefront of technological advancements,
-            ensuring that our clients always have a competitive edge in their industries.
+          <p className="mt-6 text-2xl text-neutral-600">
+            Tachyon Labs is advancing toward ASI—safe artificial superintelligence that will 
+            transform our ability to solve humanity&apos;s greatest challenges.
+          </p>
+          <p className="mt-4 text-xl text-neutral-600">
+            Our flagship platform, <span className="font-semibold text-neutral-950">Samaritan</span> (.si), 
+            embodies our ASI vision—combining unprecedented reasoning capabilities with 
+            rigorous safety alignment to ensure beneficial outcomes for all humanity.
           </p>
         </FadeIn>
       </Container>
 
-      <Technologies />
+      <SamaritanShowcase />
 
-      {/* <CaseStudies caseStudies={caseStudies} /> */}
+      <ResearchAreas />
 
-      {/* <Testimonial
-        className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
-      >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user’s microphone without triggering one of
-        those annoying permission dialogs.
-      </Testimonial> */}
+      <ResearchPartners />
 
-      <Services />
+      <Capabilities />
 
       <ContactSection />
     </>

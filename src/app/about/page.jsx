@@ -178,9 +178,9 @@ function Team() {
 }
 
 export const metadata = {
-  title: 'About Us',
+  title: 'About Us - Tachyon Labs',
   description:
-    'We believe that our strength lies in our collaborative approach, which puts our clients at the center of everything we do.',
+    'Learn about Tachyon Labs: a pioneering AI research laboratory dedicated to developing safe, beneficial artificial superintelligence.',
 }
 
 export default async function About() {
@@ -188,21 +188,28 @@ export default async function About() {
 
   return (
     <>
-      <PageIntro eyebrow="About us" title="Our strength is collaboration">
+      <PageIntro eyebrow="About us" title="Pioneering the Future of AI">
         <p>
-          We believe that our strength lies in our collaborative approach, which
-          puts our clients at the center of everything we do.
+          We are building the foundation for safe, beneficial artificial superintelligence
+          that will transform how humanity solves its greatest challenges.
         </p>
         <div className="mt-10 max-w-2xl space-y-6 text-base">
           <p>
-            Tachyon Labs was founded with a shared vision of transforming industries through the power of technology.
-            Our journey began with a small team of dedicated professionals who believed in the potential of AI,
-            and the paramount importance of Cybersecurity in the digital age.
+            Tachyon Labs was founded by a team of leading AI researchers and engineers with a singular mission:
+            to develop artificial superintelligence that is both extraordinarily capable and fundamentally aligned
+            with human values. We believe that ASI represents humanity&apos;s best opportunity to solve our most
+            pressing challenges—from climate change to disease to scientific discovery.
           </p>
           <p>
-            As we took our first steps, our commitment to innovation and our client-centric approach garnered recognition,
-            earning us the trust of numerous businesses across diverse sectors. With every project,
-            we continued to strengthen our expertise, refining our methodologies, and expanding our horizons.
+            Our flagship platform, Samaritan, embodies our approach to building superintelligence: combining
+            cutting-edge capabilities in reasoning, planning, and autonomous action with rigorous safety measures
+            and alignment techniques. Every line of code, every research paper, and every breakthrough brings us
+            closer to a future where AI serves as a powerful ally in human flourishing.
+          </p>
+          <p>
+            We conduct our research openly, publishing our findings and collaborating with the global AI community.
+            We believe that the development of ASI is too important to be done in isolation—it requires the
+            collective wisdom, diverse perspectives, and shared vigilance of researchers worldwide.
           </p>
         </div>
       </PageIntro>

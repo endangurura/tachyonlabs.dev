@@ -43,52 +43,53 @@ function Section({ title, image, children }) {
   )
 }
 
-function Discover() {
+function Research() {
   return (
-    <Section title="Discover" image={{ src: imageWhiteboard }}>
+    <Section title="Research" image={{ src: imageWhiteboard }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          We start by getting to know you and your objectives. In this phase, we conduct in-depth discussions to understand your requirements,
-          challenges, and goals. We delve into the specific needs of your project, aligning ourselves with your vision.
+          Our research process begins with identifying fundamental questions about intelligence, reasoning,
+          and alignment. We explore the theoretical foundations of ASI while maintaining a practical focus
+          on building systems that can solve real-world problems.
         </p>
         <p>
-          After gathering all the essential information, our team of experts performs a thorough analysis of your project requirements.
-          This step helps us define the scope, feasibility, and technical aspects of the project.
-          We work closely with you to set realistic expectations and establish achievable milestones.
+          We conduct extensive literature reviews, collaborate with leading institutions, and perform
+          rigorous experiments to validate our hypotheses. Every research direction is evaluated through
+          the lens of both capability advancement and safety assurance.
         </p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
+        Research Areas
       </h3>
       <TagList className="mt-4">
-        <TagListItem>In-depth questionnaires</TagListItem>
-        <TagListItem>Feasibility studies</TagListItem>
-        <TagListItem>Proofs-of-concept</TagListItem>
+        <TagListItem>Neural Architecture Search</TagListItem>
+        <TagListItem>Reinforcement Learning</TagListItem>
+        <TagListItem>Interpretability Studies</TagListItem>
+        <TagListItem>Alignment Research</TagListItem>
       </TagList>
     </Section>
   )
 }
 
-function Build() {
+function Development() {
   return (
-    <Section title="Build" image={{ src: imageLaptop, shape: 1 }}>
+    <Section title="Development" image={{ src: imageLaptop, shape: 1 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Once the requirements are crystal clear, we craft a customized solution that perfectly suits your needs.
-          Whether it&apos;s an AI application or a cybersecurity strategy,
-          we design a roadmap for the project&apos;s success.
+          Our development process transforms research breakthroughs into robust, scalable AI systems.
+          We employ cutting-edge machine learning frameworks and distributed computing infrastructure
+          to train models that push the boundaries of what&apos;s possible.
         </p>
         <p>
-          Communication is key to a fruitful collaboration. Throughout the process, we maintain open channels of communication,
-          keeping you informed about the progress, challenges, and achievements.
-          We value your input and actively incorporate your feedback into the development cycle.
+          Safety is integrated at every stage of development. We implement multiple layers of testing,
+          validation, and alignment checks to ensure our systems behave reliably and beneficially.
+          Our red team continuously probes for potential failure modes and edge cases.
         </p>
         <p>
-          We believe in the agile methodology, which allows us to be flexible and adaptive.
-          As we progress, we break down the project into manageable phases, delivering tangible results at each step.
-          Regular review meetings ensure that the project is heading in the right direction,
-          and we are quick to iterate based on your evolving needs.
+          We maintain transparency through regular publications and open-source contributions.
+          Our development practices set industry standards for responsible AI development,
+          balancing rapid innovation with careful consideration of long-term impacts.
         </p>
       </div>
 
@@ -103,46 +104,46 @@ function Build() {
   )
 }
 
-function Deliver() {
+function Deployment() {
   return (
-    <Section title="Deliver" image={{ src: imageMeeting, shape: 2 }}>
+    <Section title="Deployment" image={{ src: imageMeeting, shape: 2 }}>
       <div className="space-y-6 text-base text-neutral-600">
         <p>
-          Quality is our priority. We subject our solutions to rigorous testing to identify and fix any issues or vulnerabilities.
-          Our testing procedures adhere to industry standards and best practices,
-          ensuring that the end product is reliable, secure, and user-friendly.
+          Our deployment process ensures that AI systems are released safely and responsibly.
+          We conduct extensive testing across diverse scenarios, evaluating performance, safety,
+          and alignment before any system reaches production.
         </p>
         <p>
-          Once we&apos;ve fine-tuned the solution and obtained your approval, we handle the smooth deployment of the project.
-          Our support doesn&apos;t end there; we provide post-deployment assistance, maintenance,
-          and continuous support to ensure that the solution functions flawlessly.
+          We implement graduated deployment strategies, starting with limited access programs
+          that allow us to gather feedback and refine our systems. This measured approach
+          ensures that we can identify and address any issues before wider release.
         </p>
         <p>
-          Technology never stands still, and neither do we. We embrace a culture of continuous improvement,
-          always seeking new ways to enhance the performance and functionality of your solution.
-          We remain proactive in providing updates, upgrades, and cutting-edge innovations that keep you ahead of the competition.
+          Post-deployment, we maintain continuous monitoring and improvement cycles.
+          Our systems learn from real-world interactions while maintaining strict safety
+          boundaries, ensuring they become more capable while remaining aligned with human values.
         </p>
       </div>
 
       <h3 className="mt-12 font-display text-base font-semibold text-neutral-950">
-        Included in this phase
+        Deployment Practices
       </h3>
       <List className="mt-8">
-        <ListItem title="Testing">
-          We subject our solutions to rigorous testing to identify and fix any issues or vulnerabilities.
+        <ListItem title="Safety Testing">
+          Comprehensive evaluation of system behavior across edge cases and adversarial inputs.
         </ListItem>
-        <ListItem title="Infrastructure">
-          We handle the smooth deployment of the project.
+        <ListItem title="Staged Rollout">
+          Graduated deployment from research preview to production, with careful monitoring at each stage.
         </ListItem>
-        <ListItem title="Support">
-          Enhance the performance and functionality of your solution.
+        <ListItem title="Continuous Monitoring">
+          Real-time monitoring of system performance, safety metrics, and alignment indicators.
         </ListItem>
       </List>
     </Section>
   )
 }
 
-function Values() {
+function Principles() {
   return (
     <div className="relative mt-24 pt-24 sm:mt-32 sm:pt-32 lg:mt-40 lg:pt-40">
       <div className="absolute inset-x-0 top-0 -z-10 h-[884px] overflow-hidden rounded-t-4xl bg-gradient-to-b from-neutral-50">
@@ -153,43 +154,40 @@ function Values() {
       </div>
 
       <SectionIntro
-        eyebrow="Our values"
-        title="Balancing reliability and innovation"
+        eyebrow="Our principles"
+        title="Guided by Safety and Innovation"
       >
         <p>
-          We strive to stay at the forefront of emerging trends and
-          technologies, while completely ignoring them and forking that old
-          Rails project we feel comfortable using. We stand by our core values
-          to justify that decision.
+          Our research and development principles ensure that we advance the frontiers
+          of AI while maintaining an unwavering commitment to safety and beneficial outcomes.
         </p>
       </SectionIntro>
 
       <Container className="mt-24">
         <GridList>
-          <GridListItem title="Meticulous">
-            The first part of any partnership is getting our designer to put
-            your logo in our template. The second step is getting them to do the
-            colors.
+          <GridListItem title="Safety First">
+            Every system we build undergoes rigorous safety evaluation. We prioritize
+            alignment and beneficial behavior over raw capability advancement.
           </GridListItem>
-          <GridListItem title="Efficient">
-            We pride ourselves on never missing a deadline which is easy because
-            most of the work was done years ago.
+          <GridListItem title="Transparency">
+            We publish our research openly and engage with the global AI community
+            to ensure collective progress toward safe ASI.
           </GridListItem>
-          <GridListItem title="Adaptable">
-            Every business has unique needs and our greatest challenge is
-            shoe-horning those needs into something we already built.
+          <GridListItem title="Scalable Oversight">
+            We develop techniques that allow humans to effectively oversee and guide
+            AI systems even as they become more capable than their creators.
           </GridListItem>
-          <GridListItem title="Honest">
-            We are transparent about all of our processes, banking on the simple
-            fact our clients never actually read anything.
+          <GridListItem title="Robustness">
+            Our systems are designed to handle edge cases, adversarial inputs, and
+            unexpected scenarios while maintaining safe and reliable behavior.
           </GridListItem>
-          <GridListItem title="Loyal">
-            We foster long-term relationships with our clients that go beyond
-            just delivering a product, allowing us to invoice them for decades.
+          <GridListItem title="Beneficial by Design">
+            We architect our systems from the ground up to be helpful, harmless,
+            and honest, embedding these values into their core objectives.
           </GridListItem>
-          <GridListItem title="Innovative">
-            The technological landscape is always evolving and so are we. We are
-            constantly on the lookout for new open source projects to clone.
+          <GridListItem title="Continuous Improvement">
+            We maintain a culture of rapid iteration and learning, incorporating
+            feedback from research, deployment, and the broader community.
           </GridListItem>
         </GridList>
       </Container>
@@ -198,29 +196,29 @@ function Values() {
 }
 
 export const metadata = {
-  title: 'Our Process',
+  title: 'Our Research Process - Tachyon Labs',
   description:
-    'we believe that the foundation of successful projects lies in strong collaboration with our clients.',
+    'Learn about our rigorous research methodology for developing safe, beneficial artificial superintelligence.',
 }
 
 export default function Process() {
   return (
     <>
-      <PageIntro eyebrow="Our process" title="How we work">
+      <PageIntro eyebrow="Our methodology" title="From Research to Reality">
         <p>
-          we believe that the foundation of successful projects lies in strong collaboration with our clients.
-          We follow a structured yet flexible process to ensure that your vision transforms into reality seamlessly.
-          Here&apos;s an overview of how we work.
+          Our approach to building ASI combines fundamental research with practical engineering,
+          always guided by our commitment to safety and beneficial outcomes. We follow a rigorous
+          methodology that ensures every advancement brings us closer to aligned superintelligence.
         </p>
       </PageIntro>
 
       <div className="mt-24 space-y-24 [counter-reset:section] sm:mt-32 sm:space-y-32 lg:mt-40 lg:space-y-40">
-        <Discover />
-        <Build />
-        <Deliver />
+        <Research />
+        <Development />
+        <Deployment />
       </div>
 
-      {/* <Values /> */}
+      <Principles />
 
       <ContactSection />
     </>

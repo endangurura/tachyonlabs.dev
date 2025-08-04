@@ -133,15 +133,16 @@ function ContactDetails() {
 }
 
 export const metadata = {
-  title: 'Contact Us',
-  description: 'Let’s work together. We can’t wait to hear from you.',
+  title: 'Contact Us - Tachyon Labs',
+  description: 'Get in touch with our team to learn more about our AI research, collaborate on projects, or explore partnership opportunities.',
 }
 
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
+      <PageIntro eyebrow="Contact us" title="Join Us in Building the Future">
+        <p>Whether you&apos;re interested in our research, exploring collaboration opportunities, 
+           or want to learn more about Samaritan, we&apos;d love to hear from you.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">

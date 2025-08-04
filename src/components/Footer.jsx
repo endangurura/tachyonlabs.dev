@@ -85,8 +85,8 @@ function NewsletterForm() {
         Sign up for our newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-700">
-        Subscribe to get the latest AI &amp; Cybersecurity news, articles, resources and
-        inspiration.
+        Subscribe to get the latest ASI research news, breakthroughs, and
+        updates from Tachyon Labs.
       </p>
       <div className="relative mt-6">
         <input
