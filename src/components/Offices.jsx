@@ -25,8 +25,6 @@ export function Offices({ invert = false, ...props }) {
           The Promenade, General Mathenge Rd.
           <br />
           P.O Box 13437 - 00100, Nairobi
-          <br />
-          +254 790 536 251
         </Office>
       </li>
     </ul>

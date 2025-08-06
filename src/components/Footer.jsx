@@ -43,15 +43,15 @@ function Navigation() {
       <ul role="list" className="grid grid-cols-2 gap-8 sm:grid-cols-3">
         {navigation.map((section) => (
           <li key={section.title}>
-            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+            <div className="font-display text-sm font-semibold tracking-wider text-neutral-950 dark:text-white">
               {section.title}
             </div>
-            <ul role="list" className="mt-4 text-sm text-neutral-700">
+            <ul role="list" className="mt-4 text-sm text-neutral-600 dark:text-neutral-400">
               {section.links.map((link) => (
                 <li key={link.title} className="mt-4">
                   <Link
                     href={link.href}
-                    className="transition hover:text-neutral-950"
+                    className="transition hover:text-neutral-950 dark:hover:text-white"
                   >
                     {link.title}
                   </Link>
@@ -81,10 +81,10 @@ function ArrowIcon(props) {
 function NewsletterForm() {
   return (
     <form className="max-w-sm">
-      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950">
+      <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950 dark:text-white">
         Sign up for our newsletter
       </h2>
-      <p className="mt-4 text-sm text-neutral-700">
+      <p className="mt-4 text-sm text-neutral-600 dark:text-neutral-400">
         Subscribe to get the latest ASI research news, breakthroughs, and
         updates from Tachyon Labs.
       </p>
@@ -94,13 +94,13 @@ function NewsletterForm() {
           placeholder="Email address"
           autoComplete="email"
           aria-label="Email address"
-          className="block w-full rounded-2xl border border-neutral-300 bg-transparent py-4 pl-6 pr-20 text-base/6 text-neutral-950 ring-4 ring-transparent transition placeholder:text-neutral-500 focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5"
+          className="block w-full rounded-2xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 py-4 pl-6 pr-20 text-base/6 text-neutral-950 dark:text-white ring-4 ring-transparent transition placeholder:text-neutral-500 dark:placeholder:text-neutral-400 focus:border-neutral-950 dark:focus:border-white focus:outline-none focus:ring-neutral-950/5 dark:focus:ring-white/10"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
           <button
             type="submit"
             aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 text-white transition hover:bg-neutral-800"
+            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 transition hover:bg-neutral-800 dark:hover:bg-neutral-100"
           >
             <ArrowIcon className="w-4" />
           </button>
@@ -112,23 +112,25 @@ function NewsletterForm() {
 
 export function Footer() {
   return (
-    <Container as="footer" className="mt-24 w-full sm:mt-32 lg:mt-40">
-      <FadeIn>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
-          <Navigation />
-          <div className="flex lg:justify-end">
-            <NewsletterForm />
+    <footer className="bg-neutral-50 dark:bg-neutral-900 transition-colors">
+      <Container className="pt-24 pb-20 sm:pt-32 lg:pt-40">
+        <FadeIn>
+          <div className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+            <Navigation />
+            <div className="flex lg:justify-end">
+              <NewsletterForm />
+            </div>
           </div>
-        </div>
-        <div className="mb-20 mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-950/10 pt-12">
-          <Link href="/" aria-label="Home">
-            <Logo className="h-16" fillOnHover />
-          </Link>
-          <p className="text-sm text-neutral-700">
-            © Tachyon Labs. {new Date().getFullYear()}
-          </p>
-        </div>
-      </FadeIn>
-    </Container>
+          <div className="mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-200 dark:border-neutral-800 pt-12">
+            <Link href="/" aria-label="Home">
+              <Logo className="h-16 w-auto transition-colors" />
+            </Link>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">
+              © Tachyon Labs. {new Date().getFullYear()}
+            </p>
+          </div>
+        </FadeIn>
+      </Container>
+    </footer>
   )
 }

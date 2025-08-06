@@ -14,11 +14,11 @@ function TextInput({ label, ...props }) {
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+        className="peer block w-full border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-6 pb-4 pt-12 text-base/6 text-neutral-950 dark:text-white ring-4 ring-transparent transition focus:border-neutral-950 dark:focus:border-white focus:outline-none focus:ring-neutral-950/5 dark:focus:ring-white/10 group-first:rounded-t-2xl group-last:rounded-b-2xl"
       />
       <label
         htmlFor={id}
-        className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
+        className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 dark:text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 dark:peer-focus:text-white peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950 dark:peer-[:not(:placeholder-shown)]:text-white"
       >
         {label}
       </label>
@@ -70,10 +70,10 @@ export default function ContactUsForm() {
   return (
     <FadeIn className="lg:order-last">
       <form ref={formRef} onSubmit={onSubmit}>
-        <h2 className="font-display text-base font-semibold text-neutral-950">
+        <h2 className="font-display text-base font-semibold text-neutral-950 dark:text-white">
           Work inquiries
         </h2>
-        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
+        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50 dark:bg-neutral-800/50">
           <TextInput label="Name" name="name" autoComplete="name" required />
           <TextInput
             label="Email"
@@ -87,19 +87,10 @@ export default function ContactUsForm() {
             name="company"
             autoComplete="organization"
           />
-          <TextInput
-            label="Phone"
-            type="tel"
-            name="phone"
-            autoComplete="tel"
-            pattern="\d{10,15}" // 10 to 15 digits
-            title="Please enter a valid phone number (10 to 15 digits)"
-            required
-          />
           <TextInput label="Message" name="message" />
         </div>
-        <Button type="submit" className="mt-10">
-          Let’s work together
+        <Button type="submit" className="mt-10 mb-8">
+          Let&apos;s work together
         </Button>
       </form>
 

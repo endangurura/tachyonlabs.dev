@@ -5,7 +5,6 @@ import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
 import { SocialMedia } from '@/components/SocialMedia'
 import ContactUsForm from "@/components/ContactUsForm"
@@ -20,11 +19,11 @@ function TextInput({ label, ...props }) {
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+        className="peer block w-full border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-6 pb-4 pt-12 text-base/6 text-neutral-950 dark:text-white ring-4 ring-transparent transition focus:border-neutral-950 dark:focus:border-white focus:outline-none focus:ring-neutral-950/5 dark:focus:ring-white/10 group-first:rounded-t-2xl group-last:rounded-b-2xl"
       />
       <label
         htmlFor={id}
-        className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950"
+        className="pointer-events-none absolute left-6 top-1/2 -mt-3 origin-left text-base/6 text-neutral-500 dark:text-neutral-400 transition-all duration-200 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:font-semibold peer-focus:text-neutral-950 dark:peer-focus:text-white peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75 peer-[:not(:placeholder-shown)]:font-semibold peer-[:not(:placeholder-shown)]:text-neutral-950 dark:peer-[:not(:placeholder-shown)]:text-white"
       >
         {label}
       </label>
@@ -46,13 +45,18 @@ function RadioInput({ label, ...props }) {
 }
 
 function ContactForm() {
+  function handleSubmit(e) {
+    e.preventDefault()
+    // Form submission is handled by ContactUsForm component
+  }
+  
   return (
     <FadeIn className="lg:order-last">
       <form onSubmit={handleSubmit}>
-        <h2 className="font-display text-base font-semibold text-neutral-950">
+        <h2 className="font-display text-base font-semibold text-neutral-950 dark:text-white">
           Work inquiries
         </h2>
-        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
+        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50 dark:bg-neutral-800/50">
           <TextInput label="Name" name="name" autoComplete="name" />
           <TextInput
             label="Email"
@@ -65,7 +69,6 @@ function ContactForm() {
             name="company"
             autoComplete="organization"
           />
-          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
           <TextInput label="Message" name="message" />
           {/* <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
@@ -79,8 +82,8 @@ function ContactForm() {
             </fieldset>
           </div> */}
         </div>
-        <Button type="submit" className="mt-10">
-          Let’s work together
+        <Button type="submit" className="mt-10 mb-8">
+          Let&apos;s work together
         </Button>
       </form>
     </FadeIn>
@@ -90,40 +93,25 @@ function ContactForm() {
 function ContactDetails() {
   return (
     <FadeIn>
-      <h2 className="font-display text-base font-semibold text-neutral-950">
-        Our offices
+      <h2 className="font-display text-base font-semibold text-neutral-950 dark:text-white">
+        Get in touch
       </h2>
-      <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person?
-      </p>
-
-      <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
-
-      <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Email us
-        </h2>
-        <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
-          {[
-            ['', 'hello@tachyonlabs.dev'],
-          ].map(([label, email]) => (
-            <div key={email}>
-              <dt className="font-semibold text-neutral-950">{label}</dt>
-              <dd>
-                <Link
-                  href={`mailto:${email}`}
-                  className="text-neutral-600 hover:text-neutral-950"
-                >
-                  {email}
-                </Link>
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </Border>
+      <dl className="mt-6 grid grid-cols-1 gap-8 text-sm">
+        <div>
+          <dt className="font-semibold text-neutral-950 dark:text-white">Email</dt>
+          <dd>
+            <Link
+              href="mailto:hello@tachyonlabs.dev"
+              className="text-neutral-600 dark:text-neutral-400 hover:text-neutral-950 dark:hover:text-white transition-colors"
+            >
+              hello@tachyonlabs.dev
+            </Link>
+          </dd>
+        </div>
+      </dl>
 
       <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
+        <h2 className="font-display text-base font-semibold text-neutral-950 dark:text-white">
           Follow us
         </h2>
         <SocialMedia className="mt-6" />

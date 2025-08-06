@@ -25,10 +25,10 @@ function InstagramIcon(props) {
   )
 }
 
-function TwitterIcon(props) {
+function XIcon(props) {
   return (
     <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
-      <path d="M8.29 20.253c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0 0 22 5.922a8.19 8.19 0 0 1-2.357.646 4.118 4.118 0 0 0 1.804-2.27 8.224 8.224 0 0 1-2.605.996 4.107 4.107 0 0 0-6.993 3.743A11.65 11.65 0 0 1 3.392 4.75a4.106 4.106 0 0 0 1.27 5.477A4.072 4.072 0 0 1 2.8 9.715v.052a4.105 4.105 0 0 0 3.292 4.022 4.095 4.095 0 0 1-1.853.07 4.108 4.108 0 0 0 3.834 2.85A8.232 8.232 0 0 1 2 18.41a11.616 11.616 0 0 0 6.29 1.84" />
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
     </svg>
   )
 }
@@ -59,7 +59,7 @@ function DribbbleIcon(props) {
 
 export const socialMediaProfiles = [
   { title: 'Facebook', href: 'https://www.facebook.com/tachyonlabsdev', icon: FacebookIcon },
-  { title: 'Twitter', href: 'https://x.com/tachyonlabs_', icon: TwitterIcon },
+  { title: 'X', href: 'https://x.com/tachyonlabs_', icon: XIcon },
   { title: 'GitHub', href: 'https://github.com/tachyon-labs', icon: GitHubIcon },
 ]
 
@@ -69,7 +69,7 @@ export function SocialMedia({ className, invert = false }) {
       role="list"
       className={clsx(
         'flex gap-x-10',
-        invert ? 'text-white' : 'text-neutral-950',
+        invert ? 'text-white' : 'text-neutral-600 dark:text-neutral-400',
         className
       )}
     >
@@ -79,8 +79,10 @@ export function SocialMedia({ className, invert = false }) {
             href={socialMediaProfile.href}
             aria-label={socialMediaProfile.title}
             className={clsx(
-              'transition',
-              invert ? 'hover:text-neutral-200' : 'hover:text-neutral-700'
+              'transition-colors duration-200',
+              invert 
+                ? 'hover:text-neutral-200' 
+                : 'hover:text-neutral-950 dark:hover:text-white'
             )}
           >
             <socialMediaProfile.icon className="h-6 w-6 fill-current" />
