@@ -1,0 +1,24 @@
+Business Card Specifications
+=========================
+
+Size: 3.5" × 2" (US Standard)
+Bleed: 0.125" (1/8") on all sides
+Safe Margin: 0.25" (1/4") from trim line
+Resolution: 300 DPI
+Color Mode: CMYK for print, RGB for digital
+
+Print Specifications:
+- Paper: 16pt Premium Matte or Silk
+- Finish: Matte or Soft Touch
+- Corners: Standard or 1/8" rounded
+
+Files Included:
+- business-card-front-minimal.png
+- business-card-back-minimal.png
+- business-card-front-black.png
+- business-card-back-black.png
+
+Notes:
+- Red dashed lines indicate bleed area (will be trimmed)
+- Keep all important elements within safe margin
+- Convert to CMYK before sending to print

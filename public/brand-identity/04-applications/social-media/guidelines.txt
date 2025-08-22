@@ -1,0 +1,35 @@
+Social Media Asset Guidelines
+=============================
+
+Profile Pictures:
+- Use icon-only version
+- Ensure adequate padding (20% minimum)
+- Black on light backgrounds
+- White on dark backgrounds
+
+Cover Images:
+- Keep important content in safe area
+- YouTube: Center 1546×423px is always visible
+- Use horizontal logo with tagline
+- Maintain brand consistency
+
+Post Templates:
+- Include logo in top-left corner
+- Use grid system for alignment
+- Leave space for content
+- Maintain visual hierarchy
+
+Color Usage:
+- Twitter/X: Black or white based on theme
+- LinkedIn: Professional (black on white)
+- GitHub: High contrast for visibility
+- Instagram: Adapt to content style
+
+File Naming:
+[platform]-[type]-[color].png
+
+Included Assets:
+- Profile pictures (400×400, 500×500)
+- Cover images (platform-specific sizes)
+- Post templates (1200×1200, 1080×1080)
+- Color variants (black, white, neutral)

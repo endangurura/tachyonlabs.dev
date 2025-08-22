@@ -1,0 +1,37 @@
+Letterhead Template Instructions
+================================
+
+Digital Template Setup:
+
+Microsoft Word:
+1. Page Setup: US Letter (8.5" × 11")
+2. Margins: 0.75" all sides
+3. Header: Insert logo and company name
+4. Footer: Insert contact information
+5. Save as template (.dotx)
+
+Google Docs:
+1. Page setup: Letter (8.5" × 11")
+2. Margins: 0.75" all sides
+3. Insert header with logo
+4. Insert footer with contact info
+5. Save as template
+
+Typography:
+- Body text: 11pt, 1.5 line spacing
+- Headers: 14pt bold
+- Font: System default or Arial
+
+Logo Placement:
+- Size: 20mm height
+- Position: Top left, 0.75" from edges
+- Include company name to the right
+
+Footer Content:
+- 3 columns with contact info
+- 9pt text size
+- Gray color (#525252)
+
+Files Included:
+- letterhead-minimal.png (with content guides)
+- letterhead-professional.png (with watermark)

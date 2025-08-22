@@ -123,7 +123,7 @@ export function Footer() {
           </div>
           <div className="mt-24 flex flex-wrap items-end justify-between gap-x-6 gap-y-4 border-t border-neutral-200 dark:border-neutral-800 pt-12">
             <Link href="/" aria-label="Home">
-              <Logo className="h-16 w-auto transition-colors" />
+              <Logo className="transition-colors" />
             </Link>
             <p className="text-sm text-neutral-600 dark:text-neutral-400">
               © Tachyon Labs. {new Date().getFullYear()}

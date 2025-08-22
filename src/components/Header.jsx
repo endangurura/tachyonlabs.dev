@@ -192,7 +192,7 @@ export function Header() {
           <nav className="flex items-center justify-between py-6">
             <div className="flex items-center gap-8">
               <Link href="/" aria-label="Home" className="flex items-center">
-                <Logo className="h-10 w-auto transition-colors" />
+                <Logo className="transition-colors" />
               </Link>
               
               <div className="hidden md:flex items-center gap-8">
