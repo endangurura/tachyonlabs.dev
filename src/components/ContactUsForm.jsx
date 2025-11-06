@@ -14,7 +14,7 @@ function TextInput({ label, ...props }) {
         id={id}
         {...props}
         placeholder=" "
-        className="peer block w-full border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-6 pb-4 pt-12 text-base/6 text-neutral-950 dark:text-white ring-4 ring-transparent transition focus:border-neutral-950 dark:focus:border-white focus:outline-none focus:ring-neutral-950/5 dark:focus:ring-white/10 group-first:rounded-t-2xl group-last:rounded-b-2xl"
+        className="peer block w-full border-2 border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 px-6 pb-4 pt-12 text-base/6 text-neutral-950 dark:text-white transition focus:border-neutral-950 dark:focus:border-white focus:outline-none"
       />
       <label
         htmlFor={id}
@@ -73,7 +73,7 @@ export default function ContactUsForm() {
         <h2 className="font-display text-base font-semibold text-neutral-950 dark:text-white">
           Work inquiries
         </h2>
-        <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50 dark:bg-neutral-800/50">
+        <div className="isolate mt-6 -space-y-px bg-white/50 dark:bg-neutral-800/50 border-2 border-black dark:border-white">
           <TextInput label="Name" name="name" autoComplete="name" required />
           <TextInput
             label="Email"
@@ -95,7 +95,7 @@ export default function ContactUsForm() {
       </form>
 
       {status && (
-        <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 p-4 w-full max-w-sm rounded-md text-sm font-medium shadow-lg z-50 ${status.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'} border border-gray-200`}>
+        <div className={`fixed top-0 left-1/2 transform -translate-x-1/2 p-4 w-full max-w-sm text-sm font-medium shadow-lg z-50 ${status.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'} border-2 border-black dark:border-white`}>
           <div className="flex justify-between items-center">
             <span>{status.message}</span>
             <button onClick={() => setStatus(null)} className="text-gray-500 hover:text-gray-700">&times;</button>

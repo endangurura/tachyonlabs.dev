@@ -6,28 +6,17 @@ import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
-  // {
-  //   title: 'Work',
-  //   links: [
-  //     { title: 'FamilyFund', href: '/work/family-fund' },
-  //     { title: 'Unseal', href: '/work/unseal' },
-  //     { title: 'Phobia', href: '/work/phobia' },
-  //     {
-  //       title: (
-  //         <>
-  //           See all <span aria-hidden="true">&rarr;</span>
-  //         </>
-  //       ),
-  //       href: '/work',
-  //     },
-  //   ],
-  // },
+  {
+    title: 'Products',
+    links: [
+      { title: 'Hadron', href: '/hadron' },
+      { title: 'Samaritan', href: 'https://samaritan.si' },
+    ],
+  },
   {
     title: 'Company',
     links: [
       { title: 'About', href: '/about' },
-      { title: 'Process', href: '/process' },
-      // { title: 'Blog', href: '/blog' },
       { title: 'Contact us', href: '/contact' },
     ],
   },
@@ -85,8 +74,8 @@ function NewsletterForm() {
         Sign up for our newsletter
       </h2>
       <p className="mt-4 text-sm text-neutral-600 dark:text-neutral-400">
-        Subscribe to get the latest ASI research news, breakthroughs, and
-        updates from Tachyon Labs.
+        Subscribe to get the latest updates on data intelligence, AI research,
+        and platform announcements from Tachyon Labs.
       </p>
       <div className="relative mt-6">
         <input
@@ -94,13 +83,13 @@ function NewsletterForm() {
           placeholder="Email address"
           autoComplete="email"
           aria-label="Email address"
-          className="block w-full rounded-2xl border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 py-4 pl-6 pr-20 text-base/6 text-neutral-950 dark:text-white ring-4 ring-transparent transition placeholder:text-neutral-500 dark:placeholder:text-neutral-400 focus:border-neutral-950 dark:focus:border-white focus:outline-none focus:ring-neutral-950/5 dark:focus:ring-white/10"
+          className="block w-full border-2 border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 py-4 pl-6 pr-20 text-base/6 text-neutral-950 dark:text-white transition placeholder:text-neutral-500 dark:placeholder:text-neutral-400 focus:border-neutral-950 dark:focus:border-white focus:outline-none"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
           <button
             type="submit"
             aria-label="Submit"
-            className="flex aspect-square h-full items-center justify-center rounded-xl bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 transition hover:bg-neutral-800 dark:hover:bg-neutral-100"
+            className="flex aspect-square h-full items-center justify-center bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 transition hover:bg-neutral-800 dark:hover:bg-neutral-100 border-2 border-black dark:border-white"
           >
             <ArrowIcon className="w-4" />
           </button>

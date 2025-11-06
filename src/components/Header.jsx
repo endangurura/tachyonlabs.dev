@@ -54,7 +54,7 @@ function SystemIcon(props) {
 }
 
 function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -63,7 +63,7 @@ function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="w-9 h-9 rounded-lg bg-neutral-100 dark:bg-neutral-800" />
+      <div className="w-9 h-9 bg-neutral-100 dark:bg-neutral-800 border-2 border-black dark:border-white" />
     )
   }
 
@@ -77,7 +77,7 @@ function ThemeToggle() {
     <div className="relative">
       <button
         type="button"
-        className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-white dark:bg-neutral-900 shadow-sm ring-1 ring-neutral-900/5 dark:ring-white/10 transition-colors hover:shadow-md"
+        className="relative flex h-9 w-9 items-center justify-center bg-white dark:bg-neutral-900 border-2 border-black dark:border-white transition-colors hover:bg-neutral-100 dark:hover:bg-neutral-800"
         onClick={() => {
           const currentIndex = themes.findIndex(t => t.value === theme)
           const nextIndex = (currentIndex + 1) % themes.length
@@ -109,7 +109,6 @@ function ThemeToggle() {
 function MobileNavigation({ isOpen, setIsOpen }) {
   const links = [
     { href: '/about', label: 'About' },
-    { href: '/process', label: 'Research' },
     { href: '/contact', label: 'Contact' },
   ]
 
@@ -136,7 +135,7 @@ function MobileNavigation({ isOpen, setIsOpen }) {
               <button
                 type="button"
                 onClick={() => setIsOpen(false)}
-                className="flex h-8 w-8 items-center justify-center rounded-full bg-neutral-100 dark:bg-neutral-900"
+                className="flex h-8 w-8 items-center justify-center bg-neutral-100 dark:bg-neutral-900 border-2 border-black dark:border-white"
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -202,12 +201,6 @@ export function Header() {
                 >
                   About
                 </Link>
-                <Link
-                  href="/process"
-                  className="text-sm font-medium text-neutral-700 dark:text-neutral-300 hover:text-neutral-900 dark:hover:text-white transition-colors"
-                >
-                  Research
-                </Link>
               </div>
             </div>
 
@@ -216,7 +209,7 @@ export function Header() {
               
               <Link
                 href="/contact"
-                className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 text-sm font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors"
+                className="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 text-sm font-semibold hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors border-2 border-black dark:border-white"
               >
                 Contact us
               </Link>
@@ -224,7 +217,7 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setIsMobileNavOpen(true)}
-                className="flex md:hidden h-9 w-9 items-center justify-center rounded-lg bg-white dark:bg-neutral-900 shadow-sm ring-1 ring-neutral-900/5 dark:ring-white/10"
+                className="flex md:hidden h-9 w-9 items-center justify-center bg-white dark:bg-neutral-900 border-2 border-black dark:border-white"
               >
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
