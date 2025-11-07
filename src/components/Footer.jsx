@@ -1,9 +1,13 @@
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
 import { socialMediaProfiles } from '@/components/SocialMedia'
+import { subscribeNewsletter } from '@/lib/api'
 
 const navigation = [
   {
@@ -68,8 +72,34 @@ function ArrowIcon(props) {
 }
 
 function NewsletterForm() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState(null)
+
+  async function handleSubmit(event) {
+    event.preventDefault()
+
+    if (!email) return
+
+    try {
+      const result = await subscribeNewsletter({ email })
+
+      if (result.success) {
+        setStatus({ type: 'success', message: 'Successfully subscribed!' })
+        setEmail('')
+      } else {
+        setStatus({ type: 'error', message: result.message || 'Failed to subscribe' })
+      }
+    } catch (error) {
+      console.error('Newsletter subscription error:', error)
+      setStatus({ type: 'error', message: 'Failed to subscribe. Please try again.' })
+    }
+
+    // Clear status after 5 seconds
+    setTimeout(() => setStatus(null), 5000)
+  }
+
   return (
-    <form className="max-w-sm">
+    <form onSubmit={handleSubmit} className="max-w-sm">
       <h2 className="font-display text-sm font-semibold tracking-wider text-neutral-950 dark:text-white">
         Sign up for our newsletter
       </h2>
@@ -83,6 +113,9 @@ function NewsletterForm() {
           placeholder="Email address"
           autoComplete="email"
           aria-label="Email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
           className="block w-full border-2 border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 py-4 pl-6 pr-20 text-base/6 text-neutral-950 dark:text-white transition placeholder:text-neutral-500 dark:placeholder:text-neutral-400 focus:border-neutral-950 dark:focus:border-white focus:outline-none"
         />
         <div className="absolute inset-y-1 right-1 flex justify-end">
@@ -95,6 +128,11 @@ function NewsletterForm() {
           </button>
         </div>
       </div>
+      {status && (
+        <p className={`mt-2 text-xs ${status.type === 'success' ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'}`}>
+          {status.message}
+        </p>
+      )}
     </form>
   )
 }

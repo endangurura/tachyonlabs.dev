@@ -3,6 +3,7 @@
 import { useId, useState, useEffect, useRef } from 'react'
 import { Button } from '@/components/Button'
 import { FadeIn } from '@/components/FadeIn'
+import { createLead } from '@/lib/api'
 
 function TextInput({ label, ...props }) {
   let id = useId()
@@ -46,23 +47,28 @@ export default function ContactUsForm() {
 
     const formData = new FormData(event.currentTarget);
 
+    // Convert FormData to object
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      company: formData.get('company') || '',
+      message: formData.get('message') || '',
+      subject: 'General Inquiry',
+      source: 'tachyonlabs-contact'
+    };
+
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        body: formData,
-      });
+      const result = await createLead(data);
 
-      const result = await response.json();
-
-      if (response.ok) {
-        setStatus({ type: 'success', message: result.message || 'Form submitted successfully' });
+      if (result.success) {
+        setStatus({ type: 'success', message: "Thank you for contacting us! We'll get back to you soon." });
         formRef.current.reset(); // Clear the form fields
       } else {
-        setStatus({ type: 'error', message: result.error || 'An error occurred' });
+        setStatus({ type: 'error', message: result.message || 'An error occurred' });
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      setStatus({ type: 'error', message: 'An error occurred' });
+      setStatus({ type: 'error', message: 'Failed to submit form. Please try again.' });
     }
 
   }
